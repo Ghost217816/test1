@@ -1,0 +1,207 @@
+/* === Основні стилі === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === Хедер === */
+.site-header {
+  background: #004a99;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.logo img {
+  height: 45px;
+}
+
+/* Навігація */
+.nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #ffb400;
+}
+
+/* Кнопка */
+.btn {
+  background: #ffb400;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff8c00;
+}
+
+/* Бургер */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* === Герой секція === */
+.hero {
+  background: url('../images/hero-bg.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* === Сервісні блоки === */
+.services-overview {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.services-overview h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #004a99;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.service-item {
+  background: #fafafa;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.service-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.service-item h3 {
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+/* === CTA блок === */
+.cta {
+  background: #004a99;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta h2 {
+  margin-bottom: 15px;
+}
+
+/* === Футер === */
+.site-footer {
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9rem;
+}
+
+/* === 📱 Адаптивність === */
+
+/* Планшет */
+@media (max-width: 992px) {
+  .header-container {
+    flex-wrap: wrap;
+  }
+
+  .nav ul {
+    gap: 15px;
+  }
+}
+
+/* Телефон */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    width: 100%;
+    background: #004a99;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: white;
+  }
+
+  .nav.active {
+    display: block;
+  }
+
+  .call-btn {
+    display: none;
+  }
+
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
